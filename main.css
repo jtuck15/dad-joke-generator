@@ -57,3 +57,195 @@ h3 {
 .btn:focus {
     outline: 0;
 }
+
+/* SOCIAL PANEL CSS */
+.social-panel-container {
+    position: fixed;
+    right: 0;
+    bottom: 80px;
+    transform: translateX(100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+.social-panel-container.visible {
+    transform: translateX(-10px);
+}
+
+.social-panel {
+    background: rgb(229, 46, 113);
+    background: linear-gradient(135deg, rgba(229, 46, 113, 1) 0%, rgba(252, 176, 69, 1) 100%);
+    border-radius: 16px;
+    box-shadow: 0 16px 31px -17px rgba(0, 31, 97, 0.6);
+    border: 5px solid #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Ubuntu';
+    position: relative;
+    height: 169px;
+    width: 370px;
+    max-width: calc(100% - 10px);
+}
+
+.social-panel button.close-btn {
+    border: 0;
+    color: #97A5CE;
+    cursor: pointer;
+    font-size: 20px;
+    line-height: 0;
+    height: auto;
+    padding: 0;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.social-panel button.close-btn:focus {
+    outline: none;
+}
+
+.fa-times::before {
+    background-color: #ff8a00;
+    color: white;
+    padding-right: 4px;
+}
+
+.social-panel p {
+    color: #fff;
+    font-size: 18px;
+    line-height: 38px;
+    padding: 2px 17px 6px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    margin: 0;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 235px;
+}
+
+.social-panel p i {
+    margin: 0 5px;
+}
+
+.social-panel p a {
+    color: deepskyblue;
+    text-decoration: none;
+    font-family: 'Dosis';
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.social-panel h4 {
+    margin: 20px 0;
+    color: #000;
+    font-family: 'Ubuntu';
+    font-size: 14px;
+    line-height: 18px;
+    text-transform: uppercase;
+}
+
+.social-panel ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.social-panel ul li {
+    margin: 0 10px;
+}
+
+.social-panel ul li a {
+    border: 1px solid #DCE1F2;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    text-decoration: none;
+    background-color: #0277b5;
+}
+
+.social-panel ul li a:hover {
+    border-color: #FF6A00;
+    box-shadow: 0 9px 12px -9px #FF6A00;
+}
+
+.floating-btn {
+    border-radius: 26.5px;
+    background-color: deepskyblue;
+    border: 1px solid #fff;
+    box-shadow: 0 16px 22px -17px #fff;
+    color: #fff;
+    cursor: pointer;
+    font-family: 'Ubuntu';
+    font-size: 16px;
+    line-height: 20px;
+    height: auto;
+    padding: 12px 20px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    text-transform: none;
+}
+
+button.floating-btn:focus {
+    color: white;
+    outline: none;
+}
+
+button.floating-btn:hover {
+    background-color: #ffffff;
+    color: #001F61;
+}
+
+.floating-text {
+    background-color: #000;
+    border-radius: 10px 10px 0 0;
+    color: #fff;
+    font-family: 'Ubuntu';
+    padding: 7px 15px;
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.floating-text a {
+    color: #FF7500;
+    text-decoration: none;
+}
+
+/* RESPONSIVE DESIGN */
+
+/* social panel resizing for mobile and tablet devices */
+
+@media screen and (max-width: 480px) {
+
+    .social-panel-container.visible {
+        transform: translateX(0px);
+    }
+
+    .floating-btn {
+        right: 10px;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .social-panel {
+        height: 150px;
+        width: 348px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    button {
+        background-color: white;
+    }
+}
