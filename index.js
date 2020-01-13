@@ -17,5 +17,7 @@ async function generateJoke() {
     const joke = await jokeRes.json();
 
     console.log(joke);
+
     // add the new joke
+    jokeEl.innerHTML = joke.joke;
 }

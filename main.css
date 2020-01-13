@@ -2,11 +2,11 @@
 
 * {
     box-sizing: border-box;
+    font-family: "Cabin", sans-serif;
 }
 
 body {
     background-color: #202427;
-    font-family: "Cabin", sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,6 +47,7 @@ h3 {
     padding: 14px 40px;
     font-size: 16px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 .btn:active {
